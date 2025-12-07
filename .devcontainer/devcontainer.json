@@ -1,1 +1,18 @@
-.devcontainer/devcontainer.json
+{
+  "name": "Full Stack My_CRUD App",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y openjdk-17-jdk && npm install --global yarn",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "redhat.java",
+        "vmware.vscode-spring-boot",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "forwardPorts": [3000, 8080],
+  "remoteUser": "vscode"
+}
